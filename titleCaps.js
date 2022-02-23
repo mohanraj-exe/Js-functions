@@ -13,3 +13,38 @@ function titleCase(arr){
     return result
 }
 console.log(titleCase(['mohanraj selvam','maheswari selvam'])) //['Mohanraj Selvam','Maheswari Selvam']
+
+
+// Anonymous function
+var result = function titleCaps(arr){
+    var res = []
+    for(let i=0; i<arr.length; i++){
+
+        var word = arr[i].split(" ")
+        var wordRes = []
+        for(let j=0; j<word.length; j++){
+            wordRes.push(word[j].charAt([0]).toUpperCase()+word[j].substr([1]).toLowerCase())
+        }
+        res.push(wordRes.join(" "));
+    }                                                                                                                           
+    return res
+}
+console.log(result(["hello world","hello geek"]))
+
+
+// // By arrow functions
+var res = (arr) =>{
+    
+    var result = []
+
+    for(i=0; i<arr.length; i++){   
+     var word = arr[i].split(" ")
+     var wordRes = []
+        for(j=0; j<word.length; j++){
+            wordRes.push(word[j].charAt([0]).toUpperCase()+word[j].substr([1]).toLowerCase())
+        }
+        result.push(wordRes.join(" "));
+    }
+    return result
+}
+console.log(res(["hello world","hello geek"]))
